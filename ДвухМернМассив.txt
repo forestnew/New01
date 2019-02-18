@@ -1,13 +1,10 @@
-ќбъ€вить двумерный массив и заполнить его построчно с клавиатуры. ѕосле заполнени€ Ц показать заполненную матрицу на экран и посчитать сумму элементов отдельно в каждом столбце и каждой строке\
-
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
-	
+		
 	const int ROWS = 5;
 	const int COLS = 5;
 	int arr[ROWS][COLS], rowsum = 0, colsum{};
@@ -19,7 +16,7 @@ int main()
 		for (int j = 0; j < COLS; j++)
 		{
 			
-			cout << i << " столбец" << " строка " << j << ": ";
+			cout << i << " Cols" << " Rows " << j << ": ";
 			cin >> arr[i][j];
 
 		}
@@ -44,7 +41,7 @@ int main()
 		
 	{
 		for (int j = 0; j < COLS; j++) colsum += arr[i][j];
-		cout  << i + 1 << " строка: " << colsum << "\n" ;
+		cout  << i + 1 << " Cols: " << colsum << "\n" ;
 		colsum = 0;
 		
 	}
@@ -52,7 +49,7 @@ int main()
 	for (int j = 0; j < COLS; j++)
 	{
 		for (int i = 0; i < COLS; i++) rowsum += arr[i][j];
-		cout << j + 1 << " столбец: " << rowsum << "\n";
+		cout << j + 1 << " Rows: " << rowsum << "\n";
 		rowsum = 0;
 
 	}
